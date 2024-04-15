@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -27,11 +27,17 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
-        number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
-        signcolumn = "auto", -- sets vim.opt.signcolumn to auto
+        cmdheight = 1, -- enable cmd area
+        list = true, -- enable whitespace rendering
+        -- listchars = vim.opt.listchars:append({ tab = '› ', trail = '•', lead = '.', extends = '#', nbsp = '.' }), -- change whitespace characters
+        listchars = vim.opt.listchars:append { tab = "› ", trail = "•" }, -- change whitespace characters
+        scrolloff = 9, -- keep scroll position away from edges
+        -- shell = "/usr/bin/fish",
+        -- showcmdloc = "statusline", -- show cmd status in statusline
+        -- showtabline = 0, -- disable tabline
+        swapfile = false, -- disable swapfile creation
         wrap = false, -- sets vim.opt.wrap
+        whichwrap = vim.opt.whichwrap:append "<,>[,],h,l", -- automatically go to next line
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
