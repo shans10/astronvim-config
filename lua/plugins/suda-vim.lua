@@ -12,6 +12,7 @@ return {
       mappings = {
         n = {
           ["<Leader>W"] = { "<Cmd>SudaWrite<CR>", desc = "Suda Write" },
+          ["<Leader>bu"] = { "<Cmd>SudaWrite<CR>", desc = "Save buffer as root" },
         },
       },
     },

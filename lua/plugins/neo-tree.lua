@@ -5,6 +5,10 @@
 ---@type LazySpec
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  dependencies = {
+    "AstroNvim/astrocore",
+    opts = { mappings = { n = { ["<C-n>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle nvim-tree" } } } },
+  },
   opts = {
     filesystem = {
       hijack_netrw_behavior = "open_default",
