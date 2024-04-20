@@ -14,12 +14,23 @@ return {
     colorscheme = "astrodark",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
-      init = { -- this table overrides highlights in all themes
-        -- Normal = { bg = "#000000" },
-      },
-      astrotheme = { -- a table of overrides/changes when applying the astrotheme theme
-        -- Normal = { bg = "#000000" },
-      },
+      init = function(colors_name)
+        local get_hlgroup = require("astroui").get_hlgroup
+
+        -- Global Highlights --
+        local highlights = {
+          CursorLineFold = { link = "CursorLineNr" }, -- highlight fold indicator as well as line number
+          GitSignsCurrentLineBlame = { fg = get_hlgroup("NonText").fg, italic = true }, -- italicize git blame virtual text
+          ZenBg = { link = "Normal" }, -- Set zen-mode background to Normal mode
+        }
+
+        -- Catppuccin  Highlights --
+        if colors_name:match "^catppuccin.*" then
+          highlights.TablineFill = { link = "Tabline" }
+        end
+
+        return highlights
+      end
     },
     -- Icons can be configured throughout the interface
     icons = {
