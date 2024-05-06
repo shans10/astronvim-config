@@ -2,7 +2,7 @@
 
 **NOTE:** This is for AstroNvim v4+
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+This repo contains my personal configuration for [AstroNvim](https://github.com/AstroNvim/AstroNvim).
 
 ## 🛠️ Installation
 
@@ -24,7 +24,7 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/shans10/astronvim_config.git ~/.config/nvim
+git clone https://github.com/shans10/astronvim-config.git ~/.config/nvim
 ```
 
 #### Start Neovim
