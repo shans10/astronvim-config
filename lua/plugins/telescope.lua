@@ -28,10 +28,10 @@ return {
             if #vim.t.bufs > 1 then
               require("telescope.builtin").buffers { sort_mru = true, ignore_current_buffer = true }
             else
-              require("astronvim.utils").notify "No other buffers open"
+              require("astrocore").notify "No other buffers"
             end
           end,
-          desc = "Switch buffer",
+          desc = "Switch buffer from list",
         }
         maps.n["<Leader>bb"] = opts.mappings.n["<Leader>,"]
 
